@@ -1,0 +1,269 @@
+<!--<div class="row" >
+  
+
+  <div class="main-card mb-3 card" *ngFor="let card of cards" >
+    <img width="100%" [src]="card.img" alt="Card image cap" class="card-img-top">
+    <div class="card-body"><h5 class="card-title">Card title</h5><h6 class="card-subtitle">Card subtitle</h6>
+      Some quick example text to build on the card title and make up the bulk of the card's content.
+      <br><br>
+      <div class="card-body">
+      <div class="text-center">
+      <button id="exButton1" class=" btn btn-success mt-2" (click)="openLarge(content)">Modifier</button>
+
+      <button id="exButton2" class="btn btn-danger mt-2">Supprimer</button>
+    </div>
+  </div>
+    </div>
+
+
+
+  
+     
+      
+        <div class="card-body">
+          <ng-template #content let-c="close" let-d="dismiss">
+            <div class="modal-header">
+            
+              <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="container">
+                <br>
+                <form class="form-horizontal shadow p-3 mb-5 bg-white rounded" #f="ngForm"
+                        >
+                        <div class="row">
+                                <div class="col-6">
+                                        <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="Product Name" #prodname
+                                                        ngModel name="prodname" >
+                                        </div>
+                                        <div class="form-group">
+                                                <textarea type="text" class="form-control" placeholder="description" name="desc"
+                                                        #desc ngModel  rows="5"></textarea>
+                                        </div>
+                                        <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="quantity" name="quan" #quan
+                                                        ngModel >
+                                        </div>
+                                        <div class="form-group">
+                                                <input type="text" class="form-control" placeholder="price" name="price" #price
+                                                        ngModel >
+                                        </div>
+                                        <div class="form-group">
+                                                <input type="file" class="form-control" placeholder="Product Picture" #image
+                                                        accept="image/*" name="image"
+                                                        (change)="handleFileInput($event.target.files)">
+                                        </div>
+                                </div>
+                                <div class="col-3">
+                                        <p><b> Image d'origine</b></p>
+                                        <img [src]="card.img"
+                                                style="width:70%;height: 60%;">
+        
+                                </div>
+                                <div class="col-3">
+                                        <p><b>Nouveau Image</b></p>
+                                        <img [src]="imageUrl" style="width:170px;height: 200px;">
+        
+                                </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-6">
+                                        <input type="submit" class=" btn btn-secondary" value="Update Product">
+                                </div>
+                        </div>
+                </form>
+           </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </ng-template>
+        
+        </div>
+     
+     
+ 
+
+
+
+
+  </div>
+ 
+
+</div>-->
+
+<!--<div class="card-group"  >
+        <div class="card" *ngFor="let card of cards">
+          <img class="card-img-top" [src]="card.img"  alt="Card image cap">
+          <div class="card-body" >
+            <h5 class="card-title">Card title</h5>
+            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <div class="text-center">
+                <button id="exButton1" class=" btn btn-success mt-2" (click)="openLarge(content)">Modifier</button>
+          
+                <button id="exButton2" class="btn btn-danger mt-2">Supprimer</button>
+              </div>
+          </div>
+        </div>
+        
+              
+</div>-->
+<div class="card-columns" >
+  <div class="card" *ngFor="let card of cards">
+    <img class="card-img-top" [src]="card.img" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">Detail</h5>
+      <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+    </div>
+    <div class="d-block text-center card-footer">
+          <button class="mr-2 btn btn-success  " (click)="openLarge(content)">Modifier</button>
+          <button class="btn btn-danger">Supprimer</button>
+        </div>
+       
+<!--houni tebde modifier-->
+
+
+<div class="card-body">
+  <ng-template #content let-c="close" let-d="dismiss">
+    <div class="modal-header">
+    
+      <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      <div class="container">
+        <br>
+        <form class="form-horizontal shadow p-3 mb-5 bg-white rounded" #f="ngForm"
+                >
+                <div class="row">
+                        <div class="col-6">
+                                <div class="form-group">
+                                        <input  type="text" class="form-control" placeholder="Nom de l'annonce" 
+                                                >
+                                </div>
+                                <div class="form-group">
+                                 <input   list="staticUserIds" type="text" class="form-control" placeholder="Nom de fournisseur" 
+                                          >
+                                          <datalist id="staticUserIds">
+                                                <option >Rim Ben Abdesslem </option>
+                                                <option >Mohamed Sghair </option>
+                                                <option >Hana Zwaoui </option>
+                                  
+                                              </datalist>
+                         </div>
+                         <div class="main-card mb-3 card">
+                                <div class="card-body"><h5 class="card-title">Priorité</h5>
+                         <!-- Material inline 1 -->
+<div class="form-check form-check-inline">
+        <input type="radio" class="form-check-input" id="materialInline1" name="inlineMaterialRadiosExample" mdbInput>
+        <label class="form-check-label" for="materialInline1">1</label>
+      </div>
+      
+      <!-- Material inline 2 -->
+      <div class="form-check form-check-inline">
+        <input type="radio" class="form-check-input" id="materialInline2" name="inlineMaterialRadiosExample" mdbInput>
+        <label class="form-check-label" for="materialInline2">2</label>
+      </div>
+      
+      <!-- Material inline 3 -->
+      <div class="form-check form-check-inline">
+        <input type="radio" class="form-check-input" id="materialInline3" name="inlineMaterialRadiosExample" mdbInput>
+        <label class="form-check-label" for="materialInline3">3</label>
+      </div>
+      </div>
+                         </div>
+                                <div class="form-group">
+                                        <textarea  type="text" class="form-control" placeholder="description" name="desc"
+                                                 rows="5"></textarea>
+                                </div>
+                                <div class="form-group">
+                                        <input   type="text" class="form-control" placeholder="quantité" name="quan" 
+                                                >
+                                </div>
+                                <div class="form-group">
+                                        <input  type="text" class="form-control" placeholder="prix" name="price" #price
+                                               >
+                                </div>
+                                <div class="form-group">
+                                        <input  list="staticUser" type="text" class="form-control" placeholder="Catégorie"  >
+                                        <datalist id="staticUser">
+                                                <option >Ordinateurs </option>
+                                                <option >Bijoux et montres </option>
+                                                <option >Téléphones </option>
+                                  
+                                              </datalist>
+                                </div>
+
+                                <div class="form-group">
+                                        <input  list="staticIds" type="text" class="form-control" placeholder="Sous-catégorie"  
+                                                >
+                                                <datalist id="staticIds">
+                                                        <option >Ordinateurs portables </option>
+                                                        <option >Portables pour jeux </option>
+                                                        <option >iPhones </option>
+                                                        <option >Lenovo </option>
+                                                        <option >Galaxy </option>
+                                                        <option >Tablettes </option>
+                                                        <option >Bijouterie fine </option>
+                                                        
+                                          
+                                                      </datalist>
+                                </div>
+                                <div class="form-group">
+                                 <input   placeholder="date de debut" type="date" class="form-control" placeholder="Date debut" name="dateDebut" 
+                                        >
+                         </div>
+                         <div class="form-group">
+                           <input   type="date" class="form-control" placeholder="Date fin" name="dateFin" >
+                   </div>
+                                <div class="form-group">
+                                        <input type="file" class="form-control" placeholder="Product Picture" #image
+                                                accept="image/*" name="image"
+                                                (change)="handleFileInput($event.target.files)">
+                                </div>
+                        </div>
+                        <div class="col-6">
+                                <h4 class="text-center"></h4><!--Image attendu-->
+                                <img [src]="imageUrl" style="width:200px;height: 300px;">
+ 
+                        </div>
+                        
+                </div>
+                <div class="row">
+                        <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" (click)="c('Close click')">Fermer</button>
+                                <button type="button" class="btn btn-primary">Enregistrer</button>
+                              </div>
+                </div>
+        </form>
+   </div>
+    </div>
+    
+
+
+    
+  </ng-template>
+
+</div>
+</div>
+<!--houni toufa modifier-->
+
+
+
+ 
+
+
+
+
+</div>
+
+
+
+
+
+

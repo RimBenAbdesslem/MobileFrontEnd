@@ -1,0 +1,57 @@
+<div class="container">
+   <!-- <div class="row">
+                <div class="col-12">
+                        <button class="mybtn btn btn-secondary" (click)="show()" *ngIf="!showAdd">Click to Add</button>
+                        <button class="mybtn btn btn-secondary" (click)="hide()" *ngIf="showAdd">Click to hide</button>
+                </div>
+        </div>-->  
+        <form class="form-horizontal shadow p-3 mb-5 bg-white rounded " #f="ngForm" (ngSubmit)="f.form.valid && addProd(desc,quan,price,prodname,image)"
+                >
+                <div class="row">
+                        <div class="col-6">
+                                <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Nom de l'article" #prodname
+                                                ngModel name="prodname">
+                                </div>
+                                <div class="form-group">
+                                        <textarea type="text" class="form-control" placeholder="description" name="desc"
+                                                #desc ngModel rows="5"></textarea>
+                                </div>
+                                <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="quantité" name="quan" #quan
+                                                ngModel>
+                                </div>
+                                <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="prix" name="price" #price
+                                                ngModel>
+                                </div>
+                                <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Catégorie" name="price" #price
+                                                ngModel>
+                                </div>
+                                <div class="form-group">
+                                        <input type="text" class="form-control" placeholder="Sous-catégorie" name="price" #price
+                                                ngModel>
+                                </div>
+                                <div class="form-group">
+                                        <input type="file" class="form-control" placeholder="Product Picture" #image
+                                                accept="image/*" name="image"
+                                                (change)="handleFileInput($event.target.files)">
+                                </div>
+                        </div>
+                        <div class="col-6">
+                                <h4 class="text-center">Image attendu</h4>
+                                <img [src]="imageUrl" style="width:400px;height: 300px;">
+
+                        </div>
+                        
+                </div>
+                <div class="row">
+                        <div class="col-6">
+                                <input type="submit" class=" btn btn-primary" value="Ajouter">
+                        </div>
+                </div>
+        </form>
+        <hr>
+    
+</div>

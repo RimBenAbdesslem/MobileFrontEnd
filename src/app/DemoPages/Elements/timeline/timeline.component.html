@@ -1,0 +1,255 @@
+<ngb-carousel *ngIf="images">
+  <ng-template ngbSlide ><!--*ngIf="competence.userConnecte"-->
+    <img [src]="images[0]" width="100%" alt="Random first slide">
+    <div class="carousel-caption">
+     <!--<a class="User-Profile-Image">
+        <img class="img-80 img-radius" src="./assets/images/avatars/10.jpg" alt="user-img">
+      </a>--> 
+      <div class="media-body row">
+        <div class="col-lg-12">
+          <div class="user-title">
+            <h2>Rim Ben Abdesslem</h2><!--*ngIf="competence.userConnecte"-->
+          
+          </div>
+        </div>
+        <div>
+
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide ><!--*ngIf="competence.userConnecte"-->
+    <img [src]="images[1]" width="100%" alt="Random second slide">
+    <div class="carousel-caption">
+     <!-- <a class="User-Profile-Image">
+        <img class="img-80 img-radius" src="./assets/images/avatars/10.jpg" alt="user-img">
+      </a>-->
+      <div class="media-body row">
+        <div class="col-lg-12">
+          <div class="user-title">
+            <h2>Rim Ben Abdesslem</h2><!--{{competence.userConnecte.userName}} {{competence.userConnecte.fullName}}-->
+         
+          </div>
+        </div>
+        <div>
+
+        </div>
+      </div>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide ><!--*ngIf="competence.userConnecte"-->
+    <img [src]="images[2]" width="100%" alt="Random third slide">
+    <div class="carousel-caption">
+     <!-- <a class="User-Profile-Image">
+        <img class="img-80 img-radius" src="./assets/images/avatars/10.jpg" alt="user-img">
+      </a>-->
+      <div class="media-body row">
+        <div class="col-lg-12">
+          <div class="user-title">
+            <h2>Rim Ben Abdesslem</h2><!--{{competence.userConnecte.userName}} {{competence.userConnecte.fullName}}-->
+           
+          </div>
+        </div>
+        <div>
+
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</ngb-carousel>
+
+
+
+
+
+<div class="page-body">
+  <!--profile cover start-->
+
+  <!--profile cover end-->
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="md-tabs md-card-tabs">
+        <ngb-tabset>
+          <ngb-tab title="Information Personnel">
+            <ng-template ngbTabContent>
+              <div class="m-t-15">
+                <!-- personal card start -->
+                <div class="card">
+
+                  <div class="card-body">
+                    <div class="view-info" *ngIf="editProfile">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="general-info">
+                            <div class="row">
+                             <!--<div class="col-lg-12 col-xl-6">
+                                <div class="table-responsive">
+                                  <table class="table m-0">
+                                    <tbody>
+                                      <tr>
+                                        <th scope="row">Full Name</th>
+                                        <td>Josephine Villa</td>
+
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Gender</th>
+                                        <td>Female</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Birth Date</th>
+                                        <td>October 25th, 1990</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Marital Status</th>
+                                        <td>Single</td>
+                                      </tr>
+                                      <tr>
+                                        <th scope="row">Location</th>
+                                        <td>New York, USA</td>
+                                      </tr>
+                                    </tbody>
+                                  </table>
+                                </div>
+                              </div>--> 
+                              <!-- end of table col-lg-6 -->
+
+                              <!-- end of table col-lg-6 -->
+                            </div>
+                            <!-- end of row -->
+                          </div>
+                          <!-- end of general info -->
+                        </div>
+                        <!-- end of col-lg-12 -->
+                      </div>
+                      <!-- end of row -->
+                    </div>
+                    <!-- end of view-info -->
+                    <div class="edit-info" *ngIf="!editProfile">
+                      <form class="mb-4" autocomplete="off"  (submit)="onSubmit(form)"><!--[formGroup]="user.FormModel" -->
+                        <div class="row">
+                          <div class="col-lg-12">
+                            <div class="general-info form-material">
+                              <div class="row">
+                                <div class="col-lg-6 ">
+                                  <div class="material-group">
+                                    <div class="material-addone">
+                                      <i class="icofont icofont-user"></i>
+                                    </div>
+                                    <div class="form-group form-primary">
+                                      <input type="text" ><!--[(ngModel)]="user.formData.userName" class="form-control"
+                                        placeholder="userName"  formControlName="UserName" class="form-control" required=""
+                                          value={{competence.user.userName}}-->
+                                      <span class="form-bar"></span>
+                                      <label class="float-label">Nom</label>
+
+                                    </div>
+                                  </div>
+
+                                  <!--   <div class="material-group">
+                                  <div class="material-addone">
+                                    <i class="fa fa-heart"></i>
+                                  </div>
+                                  <div class="form-group form-primary">
+                                    <select id="hello-single" class="form-control">
+                                      <option value="">---- Marital Status ----</option>
+                                      <option value="married">Married</option>
+                                      <option value="unmarried">Unmarried</option>
+                                    </select>
+                                    <span class="form-bar"></span>
+
+                                  </div>
+                                </div>-->
+
+
+
+                                  <div class="material-group">
+                                    <div class="material-addone">
+                                      <i class="icofont icofont-location-pin"></i>
+                                    </div>
+
+                                  </div>
+
+
+                                </div>
+                                <!-- end of table col-lg-6 -->
+                                <div class="col-lg-6">
+
+                                  <div class="material-group">
+                                    <div class="material-addone">
+                                      <i class="icofont icofont-mobile-phone"></i>
+                                    </div>
+                                    <div class="form-group form-primary">
+                                      <input type="text"  ><!--formControlName="FullName"
+                                        [(ngModel)]="user.formData.fullName" class="form-control" required=""
+                                        value={{competence.user.fullName}}-->
+                                      <span class="form-bar"></span>
+                                      <label class="float-label">Prenon</label>
+                                    </div>
+                                  </div>
+
+
+                                  <div class="material-group">
+                                    <div class="material-addone">
+                                      <i class="icofont icofont-social-twitter"></i>
+                                    </div>
+                                    <div class="form-group form-primary">
+                                      <input type="text" ><!--[(ngModel)]="user.formData.email" class="form-control"
+                                        placeholder="Email"  formControlName="Email" class="form-control" required=""  value={{competence.user.email}}-->
+                                      <span class="form-bar"></span>
+                                      <label class="float-label">Email </label>
+                                    </div>
+                                  </div>
+
+
+
+                                  <div class="material-group">
+                                    <div class="material-addone">
+                                      <i class="icofont icofont-social-skype"></i>
+                                    </div>
+
+                                  </div>
+
+
+
+
+                                  <div class="material-group">
+                                    <div class="material-addone">
+                                      <i class="icofont icofont-earth"></i>
+                                    </div>
+
+                                  </div>
+
+
+
+                                </div>
+                                <!-- end of table col-lg-6 -->
+                              </div>
+                              <!-- end of row -->
+                              <div class="text-center">
+                                <button type="button" class="btn btn-primary"  (click)="onSubmit(form)">Sauvgarder</button>
+
+                              </div>
+                            </div>
+                            <!-- end of edit info -->
+                          </div>
+                          <!-- end of col-lg-12 -->
+                        </div>
+                        <!-- end of row -->
+                      </form>
+                    </div>
+                    <!-- end of edit-info -->
+                  </div>
+                  <!-- end of card-body -->
+                </div>
+              
+                <!-- personal card end-->
+              </div>
+            </ng-template>
+          </ngb-tab>
+      
+
+        </ngb-tabset>
+      </div>
+    </div>
+  </div>
+</div>

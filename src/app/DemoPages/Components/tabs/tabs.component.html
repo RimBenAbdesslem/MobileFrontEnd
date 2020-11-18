@@ -1,0 +1,171 @@
+<!--ajouter categories
+
+
+        <div class="page-title-wrapper" class="text-right">
+          <div class="page-title-actions">
+      
+            <button type="button" class="btn-shadow d-inline-flex align-items-center btn btn-success"
+              (click)=" openSmall(content1)">
+              <fa class="mr-2" name="plus"></fa>
+             Ajouter Catégorie
+            </button>
+      
+            <div class="modal-body">
+              <ng-template #content1 let-c="close" let-d="dismiss">
+                <form >
+                  <div class="modal-header">
+                    <h4 class="modal-title"></h4>
+                    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+      
+
+                  <div class="card-body">
+                    <form   class="mb-4" autocomplete="off">
+                      <div class="form-group row">
+                        <label class="col-lg-3 col-form-label form-control-label" >Catégorie</label>
+                        <div class="col-lg-9">
+                          <input class="form-control"  type="text">
+                        </div>
+                      </div>
+                      
+                    </form>
+                  </div>
+      
+              
+                  <div class="modal-footer">
+      
+                    <button type="submit" class="btn btn-primary">Ajouter</button>
+                  </div>
+                </form>
+              </ng-template>
+            </div>
+      
+          </div>
+        </div>
+     
+fin Ajouter categories-->
+
+
+
+
+
+
+
+
+
+
+
+<div class="container">
+  <!-- <div class="row">
+               <div class="col-12">
+                       <button class="mybtn btn btn-secondary" (click)="show()" *ngIf="!showAdd">Click to Add</button>
+                       <button class="mybtn btn btn-secondary" (click)="hide()" *ngIf="showAdd">Click to hide</button>
+               </div>
+       </div>-->  
+       <form [formGroup]="evaluation.AjouterProduit" class="form-horizontal shadow p-3 mb-5 bg-white rounded " 
+               >
+               <div class="row">
+                       <div class="col-6">
+                               <div class="form-group">
+                                       <input formControlName="prodname"  type="text" class="form-control" placeholder="Nom de l'article" 
+                                               >
+                               </div>
+                               <div class="form-group">
+                                <input   list="staticUserIds" type="text" class="form-control" placeholder="Nom de fournisseur" 
+                                         >
+                                         <datalist id="staticUserIds">
+                                               <option >Rim Ben Abdesslem </option>
+                                               <option >Mohamed Sghair </option>
+                                               <option >Hana Zwaoui </option>
+                                 
+                                             </datalist>
+                        </div>
+                        <div class="main-card mb-3 card">
+                          <div class="card-body"><h5 class="card-title">Priorité</h5>
+                   <!-- Material inline 1 -->
+<div class="form-check form-check-inline">
+  <input type="radio" class="form-check-input" id="materialInline1" name="inlineMaterialRadiosExample" mdbInput>
+  <label class="form-check-label" for="materialInline1">1</label>
+</div>
+
+<!-- Material inline 2 -->
+<div class="form-check form-check-inline">
+  <input type="radio" class="form-check-input" id="materialInline2" name="inlineMaterialRadiosExample" mdbInput>
+  <label class="form-check-label" for="materialInline2">2</label>
+</div>
+
+<!-- Material inline 3 -->
+<div class="form-check form-check-inline">
+  <input type="radio" class="form-check-input" id="materialInline3" name="inlineMaterialRadiosExample" mdbInput>
+  <label class="form-check-label" for="materialInline3">3</label>
+</div>
+</div>
+                   </div>
+                               <div class="form-group">
+                                       <textarea formControlName="description" name="description" type="text" class="form-control" placeholder="description" name="desc"
+                                                rows="5"></textarea>
+                               </div>
+                               <div class="form-group">
+                                       <input  formControlName="quantite" type="number" class="form-control" placeholder="quantité" 
+                                               >
+                               </div>
+                               <div class="form-group">
+                                       <input formControlName="prix"  type="number" class="form-control" placeholder="prix"  
+                                              >
+                               </div>
+                               <div class="form-group">
+                                <input  list="staticUser" type="text" class="form-control" placeholder="Catégorie"  >
+                                <datalist id="staticUser">
+                                        <option >Ordinateurs </option>
+                                        <option >Bijoux et montres </option>
+                                        <option >Téléphones </option>
+                          
+                                      </datalist>
+                        </div>
+                        <div class="form-group">
+                          <input  list="staticIds" type="text" class="form-control" placeholder="Sous-catégorie"  
+                                  >
+                                  <datalist id="staticIds">
+                                          <option >Ordinateurs portables </option>
+                                          <option >Portables pour jeux </option>
+                                          <option >iPhones </option>
+                                          <option >Lenovo </option>
+                                          <option >Galaxy </option>
+                                          <option >Tablettes </option>
+                                          <option >Bijouterie fine </option>
+                                          
+                            
+                                        </datalist>
+                  </div>
+                               <div class="form-group">
+                                <input  formControlName="dateDebut" name="dateDebut" placeholder="date de debut" type="date" class="form-control" placeholder="Date debut" name="dateDebut" 
+                                       >
+                        </div>
+                        <div class="form-group">
+                          <input  formControlName="dateFin" name="dateFin" type="date" class="form-control" placeholder="Date fin" name="dateFin" >
+                  </div>
+                               <div class="form-group">
+                                       <input type="file" class="form-control" placeholder="Product Picture" #image
+                                               accept="image/*" name="image"
+                                               (change)="handleFileInput($event.target.files)">
+                               </div>
+                       </div>
+                       <div class="col-6">
+                               <h4 class="text-center"></h4><!--Image attendu-->
+                               <img [src]="imageUrl" style="width:400px;height: 300px;">
+
+                       </div>
+                       
+               </div>
+               <div class="row">
+                       <div class="col-6">
+                         <button type="submit" class="btn btn-secondary" (click)="onSubmit()">Ajouter</button>
+                          
+                       </div>
+               </div>
+       </form>
+       <hr>
+   
+</div>
